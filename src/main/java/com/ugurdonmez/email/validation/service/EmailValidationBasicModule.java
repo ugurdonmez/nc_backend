@@ -6,7 +6,7 @@
 package com.ugurdonmez.email.validation.service;
 
 import com.google.inject.AbstractModule;
-import com.ugurdonmez.email.validation.EmailValidatorBasic;
+import com.ugurdonmez.email.validation.basic.EmailValidatorBasic;
 import com.ugurdonmez.email.validation.IEmailValidator;
 
 /**

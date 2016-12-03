@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ugurdonmez.email.validation;
+package com.ugurdonmez.email.validation.basic;
+
+import com.ugurdonmez.email.validation.IEmailValidator;
 
 /**
  *
