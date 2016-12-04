@@ -5,18 +5,10 @@
  */
 package com.ugurdonmez.email.validation.common;
 
-import org.apache.commons.validator.EmailValidator;
-
 /**
  *
  * @author ugurdonmez
  */
-public class ValidateSyntax {
-    
-    public static boolean validate (String email) {
-        EmailValidator emailValidator = EmailValidator.getInstance();
-        
-        return emailValidator.isValid(email);
-    }
+public interface TopLevelDomainValidator {
     
 }

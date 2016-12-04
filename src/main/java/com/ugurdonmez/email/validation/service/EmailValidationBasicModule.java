@@ -19,5 +19,5 @@ public class EmailValidationBasicModule extends AbstractModule {
     protected void configure() {
         bind(IEmailValidator.class).to(EmailValidatorBasic.class);
     }
-    
+
 }

@@ -9,6 +9,6 @@ package com.ugurdonmez.email.validation.common;
  *
  * @author ugurdonmez
  */
-public class ValidateDomain {
+public interface DomainValidator {
     
 }
