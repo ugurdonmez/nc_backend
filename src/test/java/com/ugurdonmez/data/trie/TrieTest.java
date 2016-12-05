@@ -40,4 +40,31 @@ public class TrieTest {
         assertFalse("empty trie empty string", trie.isInclude(""));
     }
     
+    @Test
+    public void test4() {
+        Trie trie = new Trie();
+        
+        trie.addWord("abcde");
+        trie.addWord("abcd");
+        trie.addWord("abc");
+        trie.addWord("aaa");
+        
+        ArrayList<String> list = trie.getWord("ab");
+        
+        assertEquals(list.size(), 3);
+    }
+    
+    @Test
+    public void test5() {
+        Trie trie = new Trie();
+        
+        trie.addWord("abcde");
+        trie.addWord("abcd");
+        trie.addWord("abc");
+        trie.addWord("aaa");
+        
+        ArrayList<String> list = trie.getWord("xxx");
+        
+        assertEquals(list.size(), 0);
+    }
 }
