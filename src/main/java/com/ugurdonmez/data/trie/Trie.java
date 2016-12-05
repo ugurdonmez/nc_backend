@@ -30,13 +30,13 @@ public class Trie {
      */
     public ArrayList<String> getWord(String str) {
 
+        ArrayList<String> list = new ArrayList<String>();
+        
         try {
             Node node = this.head;
             for (char c : str.toCharArray()) {
                 node = node.getChildren().get(c);
             }
-
-            ArrayList<String> list = new ArrayList<String>();
 
             Iterator<Character> it = node.getChildren().keySet().iterator();
 
@@ -46,7 +46,7 @@ public class Trie {
 
             return list;
         } catch (NullPointerException ex) {
-            return null;
+            return list;
         }
     }
 
