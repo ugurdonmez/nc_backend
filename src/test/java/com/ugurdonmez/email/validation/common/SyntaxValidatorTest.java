@@ -1,5 +1,6 @@
 package com.ugurdonmez.email.validation.common;
 
+import com.ugurdonmez.email.validation.basic.common.SyntaxValidator;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;

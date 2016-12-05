@@ -1,4 +1,4 @@
-package com.ugurdonmez.email.validation.common;
+package com.ugurdonmez.email.validation.basic.common;
 
 /**
  * Interface for checking email in correct syntax

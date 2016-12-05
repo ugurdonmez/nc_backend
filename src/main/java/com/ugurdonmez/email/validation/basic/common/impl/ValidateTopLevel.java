@@ -1,4 +1,4 @@
-package com.ugurdonmez.email.validation.common.impl;
+package com.ugurdonmez.email.validation.basic.common.impl;
 
 /**
  *

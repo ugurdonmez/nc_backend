@@ -1,6 +1,6 @@
-package com.ugurdonmez.email.validation.common.impl;
+package com.ugurdonmez.email.validation.basic.common.impl;
 
-import com.ugurdonmez.email.validation.common.SyntaxValidator;
+import com.ugurdonmez.email.validation.basic.common.SyntaxValidator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
