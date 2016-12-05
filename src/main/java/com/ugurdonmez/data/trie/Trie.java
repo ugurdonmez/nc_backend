@@ -67,8 +67,6 @@ public class Trie {
                 return false;
             }
         }
-
-        return true;
+        return node.isIsLeaf();
     }
-
 }

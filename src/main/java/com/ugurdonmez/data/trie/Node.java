@@ -12,7 +12,7 @@ import java.util.TreeMap;
  * 
  * Created by ugurdonmez on 30/07/16.
  */
-protected class Node {
+class Node {
 
     private final char c;
     private Map<Character, Node> children;
