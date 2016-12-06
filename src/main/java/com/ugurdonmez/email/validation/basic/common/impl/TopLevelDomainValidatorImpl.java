@@ -9,8 +9,14 @@ import com.ugurdonmez.email.validation.basic.data.GenericDomainsStorage;
  * @author ugurdonmez
  */
 public class TopLevelDomainValidatorImpl implements TopLevelDomainValidator {
-
+    
     public boolean isTopLevelDomainCorrect(String topLevelDomain) {
+        
+        // empty top level domain is valid
+        if (topLevelDomain.equals("")) {
+            return true;
+        }
+        
         return GenericDomainsStorage.getInstance().isIncludeGenericDomain(topLevelDomain);
     }
     

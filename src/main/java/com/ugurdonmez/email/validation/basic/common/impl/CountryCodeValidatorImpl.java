@@ -11,6 +11,12 @@ import com.ugurdonmez.email.validation.basic.data.CountryCodeStorage;
 public class CountryCodeValidatorImpl implements CountryCodeValidator {
 
     public boolean isCountryCodeCorrect(String countryCode) {
+        
+        // empty country code is valid
+        if (countryCode.equals("")) {
+            return true;
+        }
+        
         return CountryCodeStorage.getInstance().isIncludeCountryDomain(countryCode);
     }
 }
