@@ -131,17 +131,17 @@ public class DivideUtilTest {
 
     @Test
     public void testDomain6() {
-        assertEquals("abcd.abc", DivideUtil.getDomainName("abcd.abcd@abcd.abc.com.it"));
+        assertEquals("abcd.abc", DivideUtil.getDomainName("abcd.abcd@abcd.abc.com.tr"));
     }
     
     @Test
     public void testTopLevelDomain6() {
-        assertEquals("com", DivideUtil.getTopLevelDomain("abcd.abcd@abcd.abc.com.it"));
+        assertEquals("com", DivideUtil.getTopLevelDomain("abcd.abcd@abcd.abc.com.tr"));
     }
     
     @Test
     public void testCountryCode6() {
-        assertEquals("it", DivideUtil.getCountryCode("abcd.abcd@abcd.abc.com.it"));
+        assertEquals("tr", DivideUtil.getCountryCode("abcd.abcd@abcd.abc.com.tr"));
     }
     
     @Test
