@@ -1,7 +1,7 @@
-package com.ugurdonmez.email.validation.common.impl;
+package com.ugurdonmez.email.validation.basic.common.impl;
 
 import com.ugurdonmez.email.validation.basic.common.impl.SyntaxValidatorRegexImpl;
-import com.ugurdonmez.email.validation.common.SyntaxValidatorTest;
+import com.ugurdonmez.email.validation.basic.common.SyntaxValidatorTest;
 
 /**
  *

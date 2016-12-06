@@ -1,4 +1,4 @@
-package com.ugurdonmez.email.validation.common;
+package com.ugurdonmez.email.validation.basic.common;
 
 import com.ugurdonmez.email.validation.basic.common.SyntaxValidator;
 import org.junit.Test;

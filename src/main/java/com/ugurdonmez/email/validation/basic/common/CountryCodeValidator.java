@@ -10,6 +10,6 @@ package com.ugurdonmez.email.validation.basic.common;
  */
 public interface CountryCodeValidator {
     
-    boolean isCountryCodeCorrect();
+    boolean isCountryCodeCorrect(String countryCode);
     
 }
