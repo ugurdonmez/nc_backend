@@ -63,6 +63,7 @@ public class DomainsStorage {
             UniversityDomainPOJO[] array = gson.fromJson(reader, UniversityDomainPOJO[].class);
             
             for (UniversityDomainPOJO pj : array) {
+                // remove top level domain and country code
                 String [] splitted = pj.getDomain().split("\\.");
                 domainsTrie.addWord(splitted[0]);
             }
