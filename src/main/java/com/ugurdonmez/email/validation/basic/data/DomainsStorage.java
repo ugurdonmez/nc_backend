@@ -1,5 +1,6 @@
 package com.ugurdonmez.email.validation.basic.data;
 
+import com.ugurdonmez.email.validation.basic.data.pojo.UniversityDomainPOJO;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 import com.ugurdonmez.data.trie.Trie;
@@ -40,7 +41,7 @@ public class DomainsStorage {
         
         try {
             // scanner for resources/country_domains.txt file
-            Scanner scanner = new Scanner(new File("resources/generic_domains.txt"));
+            Scanner scanner = new Scanner(new File("resources/domains.txt"));
             
             // iterate each line
             while (scanner.hasNextLine()) {
@@ -59,7 +60,7 @@ public class DomainsStorage {
         try {
             Gson gson = new Gson();
             JsonReader reader = new JsonReader(new FileReader("resources/world_universities_and_domains.json"));
-            UniversityDomainPOJO[] array = gson.fromJson(reader.toString(), UniversityDomainPOJO[].class);
+            UniversityDomainPOJO[] array = gson.fromJson(reader, UniversityDomainPOJO[].class);
             
             for (UniversityDomainPOJO pj : array) {
                 String [] splitted = pj.getDomain().split("\\.");
@@ -69,7 +70,7 @@ public class DomainsStorage {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(DomainsStorage.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        
     }
 
     /**

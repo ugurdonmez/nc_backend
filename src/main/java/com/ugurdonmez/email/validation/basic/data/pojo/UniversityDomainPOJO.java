@@ -1,4 +1,4 @@
-package com.ugurdonmez.email.validation.basic.data;
+package com.ugurdonmez.email.validation.basic.data.pojo;
 
 /**
  * Store UniversityDomain json

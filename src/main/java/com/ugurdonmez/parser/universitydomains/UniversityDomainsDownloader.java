@@ -1,6 +1,6 @@
 package com.ugurdonmez.parser.universitydomains;
 
-import com.ugurdonmez.email.validation.basic.data.UniversityDomainPOJO;
+import com.ugurdonmez.email.validation.basic.data.pojo.UniversityDomainPOJO;
 import com.google.gson.Gson;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
