@@ -6,4 +6,6 @@ package com.ugurdonmez.email.validation.basic.common;
  */
 public interface TopLevelDomainValidator {
     
+    boolean isTopLevelDomainCorrect(String topLevelDomain);
+    
 }
