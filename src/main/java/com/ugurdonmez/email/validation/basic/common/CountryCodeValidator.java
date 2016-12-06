@@ -10,6 +10,12 @@ package com.ugurdonmez.email.validation.basic.common;
  */
 public interface CountryCodeValidator {
     
+    /**
+     * Method to check country code is valid or not
+     * 
+     * @param String country code
+     * @return boolean
+     */
     boolean isCountryCodeCorrect(String countryCode);
     
 }

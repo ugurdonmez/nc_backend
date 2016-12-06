@@ -10,7 +10,14 @@ import org.apache.commons.validator.EmailValidator;
  */
 public class SyntaxValidatorApacheCommonImpl implements SyntaxValidator {
 
+    /**
+     * Check email syntax
+     * 
+     * @param email
+     * @return 
+     */
     public boolean isSyntaxCorrect(String email) {
+        // get apache commin email validator
         EmailValidator emailValidator = EmailValidator.getInstance();
         
         return emailValidator.isValid(email);

@@ -4,6 +4,7 @@ import com.ugurdonmez.email.validation.basic.common.TopLevelDomainValidator;
 import com.ugurdonmez.email.validation.basic.data.GenericDomainsStorage;
 
 /**
+ * Class to validate top level domains by using trie structure populated by resource/generic_domains.txt
  * 
  * @author ugurdonmez
  */
