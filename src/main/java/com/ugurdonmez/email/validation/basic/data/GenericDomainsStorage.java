@@ -8,7 +8,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * 
+ * Singleton class to top level domain names in trie data structure
+ * 
  * @author ugurdonmez
  */
 public class GenericDomainsStorage {

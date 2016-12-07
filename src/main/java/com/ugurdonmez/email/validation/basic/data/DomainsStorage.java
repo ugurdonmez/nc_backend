@@ -12,7 +12,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * 
+ * Singleton class to common email provider domains and university domains in trie data structure
+ * 
  * @author ugurdonmez
  */
 public class DomainsStorage {
