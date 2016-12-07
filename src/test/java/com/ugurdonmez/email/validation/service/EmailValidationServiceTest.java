@@ -20,16 +20,108 @@ public class EmailValidationServiceTest {
         emailValidationService = injector.getInstance(EmailValidationService.class);
     }
 
-    /**
-     * Test of isValidEmail method, of class EmailValidationService.
-     */
     @Test
-    public void testIsValidEmail() {
-        System.out.println("isValidEmail");
-        
+    public void testIsValidEmail() {        
         EmailValidationResult expectedResult = new EmailValidationResult(true, true, true, true);
         
         assertEquals(expectedResult, emailValidationService.isValidEmail("abcde@gmail.com"));
+    }
+    
+    @Test
+    public void testIsValidEmail1() {        
+        EmailValidationResult expectedResult = new EmailValidationResult(true, true, true, true);
+        
+        assertEquals(expectedResult, emailValidationService.isValidEmail("abcde@gmail.com.tr"));
+    }
+    
+    @Test
+    public void testIsValidEmail2() {        
+        EmailValidationResult expectedResult = new EmailValidationResult(true, true, true, true);
+        
+        assertEquals(expectedResult, emailValidationService.isValidEmail("abcde@unibz.it"));
+    }
+    
+    @Test
+    public void testIsValidEmail3() {        
+        EmailValidationResult expectedResult = new EmailValidationResult(true, true, true, true);
+        
+        assertEquals(expectedResult, emailValidationService.isValidEmail("abcde@yahoo.co.uk"));
+    }
+    
+    @Test
+    public void testIsValidEmail4() {        
+        EmailValidationResult expectedResult = new EmailValidationResult(true, true, true, true);
+        
+        assertEquals(expectedResult, emailValidationService.isValidEmail("abcde@aol.com"));
+    }
+    
+    @Test
+    public void testIsValidEmail5() {        
+        EmailValidationResult expectedResult = new EmailValidationResult(true, true, true, true);
+        
+        assertEquals(expectedResult, emailValidationService.isValidEmail("abcde@att.net"));
+    }
+    
+    @Test
+    public void testIsValidEmail6() {        
+        EmailValidationResult expectedResult = new EmailValidationResult(true, true, true, true);
+        
+        assertEquals(expectedResult, emailValidationService.isValidEmail("abcde@gmail.ru"));
+    }
+    
+    @Test
+    public void testIsValidEmailDomainNotFound() {        
+        EmailValidationResult expectedResult = new EmailValidationResult(true, false, true, true);
+        
+        assertEquals(expectedResult, emailValidationService.isValidEmail("abcde@asdasd.net"));
+    }
+    
+    @Test
+    public void testIsValidEmailDomainNotFound1() {        
+        EmailValidationResult expectedResult = new EmailValidationResult(true, false, true, true);
+        
+        assertEquals(expectedResult, emailValidationService.isValidEmail("abcde@asdasd.net.tr"));
+    }
+    
+    @Test
+    public void testIsValidEmailDomainNotFound2() {        
+        EmailValidationResult expectedResult = new EmailValidationResult(true, false, true, true);
+        
+        assertEquals(expectedResult, emailValidationService.isValidEmail("abcde@asdasd.it"));
+    }
+    
+    @Test
+    public void testIsValidEmailTopDomainNotFound() {        
+        EmailValidationResult expectedResult = new EmailValidationResult(true, true, false, true);
+        EmailValidationResult expectedResult1 = emailValidationService.isValidEmail("abcde@gmail.nettt");
+        
+        assertEquals(expectedResult, emailValidationService.isValidEmail("abcde@gmail.nettt"));
+    }
+
+    
+    @Test
+    public void testIsValidEmailTopDomainNotFound1() {        
+        EmailValidationResult expectedResult = new EmailValidationResult(true, true, false, true);
+        EmailValidationResult expectedResult1 = emailValidationService.isValidEmail("abcde@gmail.nettt.tr");
+        
+        assertEquals(expectedResult, emailValidationService.isValidEmail("abcde@gmail.nettt.tr"));
+    }
+    
+    @Test
+    public void testIsValidEmailCountryNotFound() {        
+        EmailValidationResult expectedResult = new EmailValidationResult(true, true, false, false);
+        EmailValidationResult expectedResult1 = emailValidationService.isValidEmail("abcde@gmail.com.trrrr");
+        
+        assertEquals(expectedResult, emailValidationService.isValidEmail("abcde@gmail.nettt"));
+    }
+
+    
+    @Test
+    public void testIsValidEmailCountryNotFound1() {        
+        EmailValidationResult expectedResult = new EmailValidationResult(true, true, false, false);
+        EmailValidationResult expectedResult1 = emailValidationService.isValidEmail("abcde@gmail.commm.trrrr");
+        
+        assertEquals(expectedResult, emailValidationService.isValidEmail("abcde@gmail.nettt.tr"));
     }
     
 }
