@@ -159,4 +159,64 @@ public class DivideUtilTest {
         assertEquals("it", DivideUtil.getCountryCode("abcde@unibz.it"));
     }
     
+    @Test
+    public void testDomain8() {
+        assertEquals("gmail", DivideUtil.getDomainName("abcd@gmail.comm.tr"));
+    }
+    
+    @Test
+    public void testTopLevelDomain8() {
+        assertEquals("comm", DivideUtil.getDomainName("abcd@gmail.comm.tr"));
+    }
+    
+    @Test
+    public void testCountryCode8() {
+        assertEquals("tr", DivideUtil.getDomainName("abcd@gmail.comm.tr"));
+    }
+    
+    @Test
+    public void testDomain9() {
+        assertEquals("gmail", DivideUtil.getDomainName("abcd@gmail.com.trr"));
+    }
+    
+    @Test
+    public void testTopLevelDomain9() {
+        assertEquals("com", DivideUtil.getDomainName("abcd@gmail.com.trr"));
+    }
+    
+    @Test
+    public void testCountryCode9() {
+        assertEquals("trr", DivideUtil.getDomainName("abcd@gmail.comm.trr"));
+    }
+    
+    @Test
+    public void testDomain10() {
+        assertEquals("gmail", DivideUtil.getDomainName("abcd@gmail.comm.trr"));
+    }
+    
+    @Test
+    public void testTopLevelDomain10() {
+        assertEquals("comm", DivideUtil.getDomainName("abcd@gmail.comm.trr"));
+    }
+    
+    @Test
+    public void testCountryCode10() {
+        assertEquals("trr", DivideUtil.getDomainName("abcd@gmail.commm.trr"));
+    }
+    
+    @Test
+    public void testDomain11() {
+        assertEquals("gnail", DivideUtil.getDomainName("abcd@gnail.comm.trr"));
+    }
+    
+    @Test
+    public void testTopLevelDomain11() {
+        assertEquals("comm", DivideUtil.getDomainName("abcd@gmail.comm.trr"));
+    }
+    
+    @Test
+    public void testCountryCode11() {
+        assertEquals("trr", DivideUtil.getDomainName("abcd@gmail.commm.trr"));
+    }
+    
 }
