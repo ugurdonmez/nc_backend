@@ -2,6 +2,8 @@ package com.ugurdonmez.email.validation.service;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import com.ugurdonmez.email.validation.EmailValidationResult;
+import com.ugurdonmez.email.validation.basic.EmailValidatorBasicModule;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -14,7 +16,7 @@ public class EmailValidationServiceTest {
     EmailValidationService emailValidationService;
         
     public EmailValidationServiceTest() {
-        Injector injector = Guice.createInjector(new EmailValidationBasicModule());
+        Injector injector = Guice.createInjector(new EmailValidatorBasicModule());
         emailValidationService = injector.getInstance(EmailValidationService.class);
     }
 
@@ -24,7 +26,10 @@ public class EmailValidationServiceTest {
     @Test
     public void testIsValidEmail() {
         System.out.println("isValidEmail");
-        assertTrue(emailValidationService.isValidEmail("abc@gmail.com"));
+        
+        EmailValidationResult expectedResult = new EmailValidationResult(true, true, true, true);
+        
+        assertEquals(expectedResult, emailValidationService.isValidEmail("abcde@gmail.com"));
     }
     
 }

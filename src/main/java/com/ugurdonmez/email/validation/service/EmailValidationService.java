@@ -1,6 +1,7 @@
 package com.ugurdonmez.email.validation.service;
 
 import com.google.inject.Inject;
+import com.ugurdonmez.email.validation.EmailValidationResult;
 import com.ugurdonmez.email.validation.IEmailValidator;
 
 /**
@@ -16,7 +17,7 @@ public class EmailValidationService {
         this.emailValidator = emailValidator;
     }
     
-    public boolean isValidEmail(String email) {
+    public EmailValidationResult isValidEmail(String email) {
         return emailValidator.isValidEmail(email);
     }
 }
