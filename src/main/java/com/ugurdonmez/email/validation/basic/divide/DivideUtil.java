@@ -40,10 +40,23 @@ public class DivideUtil {
      */
     public static String getDomainName(String email) {
         
+        if (email == null) {
+            return null;
+        }
+        
+        String [] splittedAddress = email.split("@");
+        
+        if (splittedAddress.length < 2) {
+            return null;
+        }
+        
         // get full domain name
-        InternetDomainName fullDomainName = InternetDomainName.from(email.split("@")[1]);
+        InternetDomainName fullDomainName = InternetDomainName.from(splittedAddress[1]);
         // get public part of domain (top level domain.country code)
-        InternetDomainName publicDomainName = fullDomainName.publicSuffix();
+        
+        if (fullDomainName.parts().size() == 0) {
+            return null;
+        }
         
         // return only domain name without top level domain and country code
         return  fullDomainName.parts().get(0);
@@ -56,8 +69,19 @@ public class DivideUtil {
      * @return String
      */
     public static String getTopLevelDomain(String email) {
+        
+        if (email == null) {
+            return null;
+        }
+        
+        String [] splittedAddress = email.split("@");
+        
+        if (splittedAddress.length < 2) {
+            return null;
+        }
+       
         // get full domain name
-        InternetDomainName fullDomainName = InternetDomainName.from(email.split("@")[1]);
+        InternetDomainName fullDomainName = InternetDomainName.from(splittedAddress[1]);
         
         // we have unvalid public suffix
         if (!fullDomainName.hasPublicSuffix()) {
@@ -103,8 +127,19 @@ public class DivideUtil {
      * @return String
      */
     public static String getCountryCode(String email) {
+        
+        if (email == null) {
+            return null;
+        }
+        
+        String [] splittedAddress = email.split("@");
+        
+        if (splittedAddress.length < 2) {
+            return null;
+        }
+       
         // get full domain name
-        InternetDomainName fullDomainName = InternetDomainName.from(email.split("@")[1]);
+        InternetDomainName fullDomainName = InternetDomainName.from(splittedAddress[1]);
         
         // we have unvalid public suffix
         if (!fullDomainName.hasPublicSuffix()) {

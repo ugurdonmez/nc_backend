@@ -12,6 +12,10 @@ public class TopLevelDomainValidatorImpl implements TopLevelDomainValidator {
     
     public boolean isTopLevelDomainCorrect(String topLevelDomain) {
         
+        if (topLevelDomain == null) {
+            return false;
+        }
+        
         // empty top level domain is valid
         if (topLevelDomain.equals("")) {
             return true;

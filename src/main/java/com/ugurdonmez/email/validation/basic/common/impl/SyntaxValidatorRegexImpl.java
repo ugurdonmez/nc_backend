@@ -18,6 +18,11 @@ public class SyntaxValidatorRegexImpl implements SyntaxValidator {
      * @return 
      */
     public boolean isSyntaxCorrect(String email) {
+        
+        if (email == null) {
+            return false;
+        }
+        
         // TODO: fix regex
         Pattern pattern = Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
 

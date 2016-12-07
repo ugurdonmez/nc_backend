@@ -12,6 +12,10 @@ public class CountryCodeValidatorImpl implements CountryCodeValidator {
 
     public boolean isCountryCodeCorrect(String countryCode) {
         
+        if (countryCode == null) {
+            return false;
+        }
+        
         // empty country code is valid
         if (countryCode.equals("")) {
             return true;

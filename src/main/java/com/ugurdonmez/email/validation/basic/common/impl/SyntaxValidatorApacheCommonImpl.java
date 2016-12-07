@@ -17,6 +17,11 @@ public class SyntaxValidatorApacheCommonImpl implements SyntaxValidator {
      * @return 
      */
     public boolean isSyntaxCorrect(String email) {
+        
+        if (email == null) {
+            return false;
+        }
+        
         // get apache commin email validator
         EmailValidator emailValidator = EmailValidator.getInstance();
         
