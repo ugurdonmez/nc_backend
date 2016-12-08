@@ -1,7 +1,8 @@
 package com.ugurdonmez.email.suggestion.stringdistance;
 
 /**
- *
+ * Interface for string distance calculator
+ * 
  * @author ugurdonmez
  */
 public interface StringDistanceCalculator {

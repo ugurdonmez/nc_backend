@@ -11,18 +11,33 @@ import java.util.List;
 import java.util.Set;
 
 /**
- *
+ * Basic implementation of IEmailSuggestion
+ * 
+ * Calculate the nearest distance between common email domains
+ * 
  * @author ugurdonmez
  */
 public class EmailSuggestionBasic implements IEmailSuggestion {
     
+    // String distance calculator
     private final StringDistanceCalculator stringDistanceCalculator;
-
+    
+    /**
+     * Constructor with StringDistanceCalculator
+     * 
+     * @param stringDistanceCalculator 
+     */
     @Inject
     public EmailSuggestionBasic(StringDistanceCalculator stringDistanceCalculator) {
         this.stringDistanceCalculator = stringDistanceCalculator;
     }
     
+    /**
+     * get email suggestions
+     * 
+     * @param email String
+     * @return EmailSuggestionResult
+     */
     public EmailSuggestionResult getEmailSuggestions(String email) {
         
         if (email == null || email.equals("")) {

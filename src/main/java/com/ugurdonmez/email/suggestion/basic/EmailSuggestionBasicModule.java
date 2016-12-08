@@ -6,7 +6,8 @@ import com.ugurdonmez.email.suggestion.stringdistance.StringDistanceCalculator;
 import com.ugurdonmez.email.suggestion.stringdistance.impl.StringDistanceCalculatorSift3;
 
 /**
- *
+ * Create basic email suggestion module
+ * 
  * @author ugurdonmez
  */
 public class EmailSuggestionBasicModule extends AbstractModule {

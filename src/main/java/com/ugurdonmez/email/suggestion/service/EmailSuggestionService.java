@@ -5,7 +5,8 @@ import com.ugurdonmez.email.suggestion.EmailSuggestionResult;
 import com.ugurdonmez.email.suggestion.IEmailSuggestion;
 
 /**
- *
+ * 
+ * 
  * @author ugurdonmez
  */
 public class EmailSuggestionService {
