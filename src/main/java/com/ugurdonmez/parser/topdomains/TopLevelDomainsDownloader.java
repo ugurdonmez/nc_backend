@@ -18,8 +18,8 @@ public class TopLevelDomainsDownloader {
         
         String url = "http://www.iana.org/domains/root/db";
         
-        PrintWriter writerCountry = new PrintWriter("resources/country_domains.txt", "UTF-8");
-        PrintWriter writerGeneric = new PrintWriter("resources/generic_domains.txt", "UTF-8");
+        PrintWriter writerCountry = new PrintWriter("main/resources/country_domains.txt", "UTF-8");
+        PrintWriter writerGeneric = new PrintWriter("main/resources/generic_domains.txt", "UTF-8");
         
         Document doc = Jsoup.connect(url).get();
 

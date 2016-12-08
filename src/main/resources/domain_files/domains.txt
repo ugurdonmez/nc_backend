@@ -40,3 +40,5 @@ hanmail
 daum
 nate
 lycos
+fibertel
+tvcablenet

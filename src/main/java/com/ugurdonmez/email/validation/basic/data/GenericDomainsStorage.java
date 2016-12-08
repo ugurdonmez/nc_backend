@@ -35,7 +35,7 @@ public class GenericDomainsStorage {
         
         try {
             // scanner for resources/generic_domains.txt file
-            Scanner scanner = new Scanner(new File("resources/generic_domains.txt"));
+            Scanner scanner = new Scanner(GenericDomainsStorage.class.getClassLoader().getResourceAsStream("domain_files/generic_domains.txt"));
             
             // iterate each line
             while (scanner.hasNextLine()) {
@@ -43,7 +43,7 @@ public class GenericDomainsStorage {
                 genericDomainTrie.addWord(scanner.nextLine());
             }
             
-        } catch (FileNotFoundException ex) {
+        } catch (Exception ex) {
             Logger.getLogger(CountryCodeStorage.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

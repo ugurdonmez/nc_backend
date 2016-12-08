@@ -33,14 +33,14 @@ public class CommonMailAddressStorage {
         commonMailAdressesSet = new HashSet<String>();
         
         try {
-            Scanner scanner = new Scanner(new File("resources/common_mail_domains.txt"));
+            Scanner scanner = new Scanner(CommonMailAddressStorage.class.getClassLoader().getResourceAsStream("domain_files/common_mail_domains.txt"));
             
             // iterate throught each line
             while(scanner.hasNextLine()) {
                 commonMailAdressesSet.add(scanner.nextLine());
             }
             
-        } catch (FileNotFoundException ex) {
+        } catch (Exception ex) {
             Logger.getLogger(CommonMailAddressStorage.class.getName()).log(Level.SEVERE, null, ex);
         }
         

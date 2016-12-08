@@ -3,6 +3,8 @@ package com.ugurdonmez.email.validation.basic.data;
 import com.ugurdonmez.data.trie.Trie;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -35,15 +37,14 @@ public class CountryCodeStorage {
         
         try {
             // scanner for resources/country_domains.txt file
-            Scanner scanner = new Scanner(new File("resources/country_domains.txt"));
-            
+            Scanner scanner = new Scanner(CountryCodeStorage.class.getClassLoader().getResourceAsStream("domain_files/country_domains.txt"));         
             // iterate each line
             while (scanner.hasNextLine()) {
                 // add line to trie
                 countryCodeTrie.addWord(scanner.nextLine());
             }
             
-        } catch (FileNotFoundException ex) {
+        } catch (Exception ex) {
             Logger.getLogger(CountryCodeStorage.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
