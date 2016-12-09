@@ -41,6 +41,8 @@
 
 `mvn package`
 
+* war file created under target directory
+
 
 ## Run in Google App Engine local development environment ##
 * Clone or download repository to your local(or server)
