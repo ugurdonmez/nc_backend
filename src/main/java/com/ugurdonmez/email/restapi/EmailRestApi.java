@@ -27,7 +27,7 @@ public class EmailRestApi {
         
         String json = gson.toJson(result);
 
-        return Response.ok(json, MediaType.APPLICATION_JSON).build();
+        return Response.ok(json, MediaType.APPLICATION_JSON).header("Access-Control-Allow-Origin", "*").build();
     }
 
 }

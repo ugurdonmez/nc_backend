@@ -105,4 +105,19 @@ public abstract class IEmailSuggestionTest <T extends IEmailSuggestion> {
         
         assertEquals(expected, result);
     }
+    
+    @Test
+    public void test8() {
+        EmailSuggestionResult result = emailSuggestion.getEmailSuggestions("abcd@g");
+        
+        EmailSuggestionResult expected = new EmailSuggestionResult();
+        expected.setDistance(3);
+        expected.addToSuggestions("abcd@gmx.fr");
+        expected.addToSuggestions("abcd@ya.ru");
+        expected.addToSuggestions("abcd@gmx.net");
+        expected.addToSuggestions("abcd@gmx.de");
+        expected.addToSuggestions("abcd@gmx.com");
+        
+        assertEquals(expected, result);
+    }
 }

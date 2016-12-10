@@ -173,5 +173,19 @@ public class EmailValidationAndSuggestionServiceTest {
         assertEquals(expected, result);
     }
     
+    @Test
+    public void test11() {
+        EmailValidationAndSuggestionResult result = service.validateSuggest("abcd@g");
+        
+        EmailValidationResult emailValidationResult = new EmailValidationResult(false, false, false, true);
+        
+        EmailSuggestionResult emailSuggestionResult = new EmailSuggestionResult();
+        emailSuggestionResult.setDistance(0);
+        
+        EmailValidationAndSuggestionResult expected = new EmailValidationAndSuggestionResult(emailValidationResult, emailSuggestionResult);
+        
+        assertEquals(expected, result);
+    }
+    
     
 }

@@ -169,4 +169,11 @@ public class EmailValidationServiceTest {
         assertEquals(expectedResult, emailValidationService.isValidEmail(""));
     }
     
+    @Test
+    public void testTopLevelDomain() {        
+        EmailValidationResult expectedResult = new EmailValidationResult(true, true, false, true);
+        
+        assertEquals(expectedResult, emailValidationService.isValidEmail("abcde@gmail.comm"));
+    }
+    
 }

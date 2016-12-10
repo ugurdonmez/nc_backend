@@ -85,6 +85,9 @@ public class DivideUtil {
         
         // we have unvalid public suffix
         if (!fullDomainName.hasPublicSuffix()) {
+            if (fullDomainName.parts().size() == 1) {
+                return null;
+            }
             // TODO: now we assume that we dont have subdomain and country code is at the end
             return fullDomainName.parts().get(1);
         }
