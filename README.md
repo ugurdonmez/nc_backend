@@ -22,6 +22,13 @@
 * commons-validator
 * org.jsoup
 
+## Demo Run ##
+
+Demo project run on the following url. You can get suggestions by changing path variable.
+
+`http://ugurdonmez.com:8080/nc_backend-1.0-SNAPSHOT/emailapi/validate/abcd@yaho.com`
+
+
 ## How to create war file ##
 
 #### Prerequisites ####
@@ -65,9 +72,3 @@
 
 `http://localhost:8080/emailapi/validate/abcd@yaho.com`
 
-
-## Demo Run ##
-
-Demo project run on the following url. You can get suggestions by changing path variable.
-
-`http://ugurdonmez.com:8080/nc_backend-1.0-SNAPSHOT/emailapi/validate/abcd@yaho.com`
